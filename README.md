@@ -34,7 +34,22 @@ with this formula. n = index number of word.
       - n = pyramid level +1 going from 1 at 1 up. 
       - Number of pyramid levels = (NumberOfLines) / (0.5* n *(n+1))
       - Level = 0.5 * n *(n+1) 
-         *** Pattern/formula from using this link: https://www.wolframalpha.com/widgets/view.jsp?id=a3af2e675c3bfae0f2ecce820c2bef43       
+      - Pattern/formula gotten using a sample of anwsers fed into this tool: https://www.wolframalpha.com/widgets/view.jsp?id=a3af2e675c3bfae0f2ecce820c2bef43       
 
-# Implementation 
+# Implementation Plan
+ -For implementing these steps I need to refresh myself with format of list of key-pair values in python. 
+      
+      -Read file and make list of line values with form (Number | Message)
+      -Reorder that list according to number. 
+      -#ofLevels formula = (NumberOfLines) / (0.5* n *(n+1))
+      -Count out what that means for the values 
+      -(i.e. what to cut off at the end)
 
+      -Use a loop of length: #ofLevels to grab the word's we want. (using the formula will be like we're grabbing from the right side of the pyramid).
+      -Each loop here will be 1 more level down the pyramid.
+# Helper Methods 
+
+      -Count: Returns number of lines of text input.
+      -Read: Returns a key-pair list made up of each line of the text.
+      -CutForPyramid( key-pair list): Returns a new list without any extra values that wouldn't fit on the pyramid
+      -Decode (new,in order list)" :Print message words using formula. Loop #ofLevels times + ' ' to each word to make sentence.

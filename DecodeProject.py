@@ -8,14 +8,11 @@ def count(file):
     
     print("Decoding " + pathToFile)
     myFile = open(pathToFile, 'r')
-    text = myFile.read(myFile)
-    
+    text = myFile.read(myFile) 
     numberOfLines = 0
     for character in text:
         if character == "\n":
             numberOfLines = numberOfLines + 1
-
-    
     return "This input has " + numberOfLines + "."
 def read(file):
     myFile = open(pathToFile, 'r')
